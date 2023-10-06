@@ -8,10 +8,10 @@ function Navbar() {
 
     return (
         <>
-            <div className='navbar w-full  text-black flex justify-center'>
-                <div className="container flex justify-evenly text-lg">
-                    <div className='div-logo flex justify-center items-center'>
-                        <div className="flex justify-center ">
+            <div className='navbar w-full  text-black flex justify-center fixed-header altura'>
+                <div className="container flex justify-evenly text-lg ">
+                    <div className='div-logo flex justify-center items-center altura'>
+                        <div className="flex justify-center">
                             <img src={homeLogo} alt="" className='' />
                         </div>
                         <div className='text-2xl font-bold uppercase'>MaternaCare</div>
