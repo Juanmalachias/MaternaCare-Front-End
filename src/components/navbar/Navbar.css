@@ -3,8 +3,19 @@
     color: black;
 }
 
-
 .div-logo{
-width: 350px;
-height: 200px;
+height: 150px;
+width: 300px;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.altura {
+    height: 100px;
 }
