@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css';
 import homeLogo from '../../assets/LogoHome2.png'
 
@@ -17,6 +18,8 @@ function Navbar() {
                         <div className='text-2xl font-bold uppercase'>MaternaCare</div>
                     </div>
                     <div className='flex  justify-between gap-20 items-center font-bold'>
+                        <Link to='/login' className='hover:underline'>Login</Link>
+                        <Link to='/home' className='hover:underline'>Home</Link>
                         <div className='hover:underline'>Postagens</div>
                         <div className='hover:underline'>Temas</div>
                         <div className='hover:underline'>Cadastrar tema</div>
