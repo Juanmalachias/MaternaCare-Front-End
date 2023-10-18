@@ -8,6 +8,12 @@ import Login from './paginas/login/Login';
 import Cadastro from './paginas/cadastro/Cadastro';
 import Home from './paginas/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
+import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
+import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
+import FormularioCategoria from './components/categoria/formularioCategoria/FormularioCategoria';
+import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
+import FormularioProdutos from './components/produtos/formularioProdutos/FormularioProdutos';
+import DeletarProdutos from './components/produtos/deletarProdutos/DeletarProdutos';
 
 
 function App() {
@@ -22,6 +28,15 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/categoria" element={<ListaCategoria />} />
+              <Route path="/cadastroCategoria" element={<FormularioCategoria/>} />
+              <Route path="/editarCategoria/:id" element={<FormularioCategoria/>} />
+              <Route path="/deletarCategoria/:id" element={<DeletarCategoria/>} />
+
+              <Route path="/produtos" element={< ListaProdutos/>} />
+              <Route path="/cadastroProduto" element={<FormularioProdutos />} />
+              <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
+              <Route path="/deletarProduto/:id" element={<DeletarProdutos />} />
             </Routes>
           </div>
           <Footer />

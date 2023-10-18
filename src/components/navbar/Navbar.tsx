@@ -20,9 +20,10 @@ function Navbar() {
                     <div className='flex  justify-between gap-20 items-center font-bold'>
                         <Link to='/login' className='hover:underline'>Login</Link>
                         <Link to='/home' className='hover:underline'>Home</Link>
-                        <div className='hover:underline'>Postagens</div>
-                        <div className='hover:underline'>Temas</div>
-                        <div className='hover:underline'>Cadastrar tema</div>
+                        <Link to = '/produtos' className='hover:underline'>Produtos</Link>
+                        <Link to='/categoria' className='hover:underline'>Categoria</Link>
+                        <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>
+                        <Link to='/cadastroProduto' className='hover:underline'>Cadastrar Produto</Link>
                         <div className='hover:underline'>Perfil</div>
                         <div className='hover:underline'>Sair</div>
                     </div>
