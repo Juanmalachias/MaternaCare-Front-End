@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../service/Service';
-import CardPostagem from '../cardProdutos/CardProdutos';
 import { toastAlerta } from '../../../utils/toastAlerta';
+import CardProdutos from '../cardProdutos/CardProdutos';
 
 function ListaProdutos() {
   const [produtos, setProduto] = useState<Produto[]>([]);
@@ -55,7 +55,7 @@ function ListaProdutos() {
       )}
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (
-          <CardPostagem key={produto.id} post={produto} />
+          <CardProdutos key={produto.id} post={produto} />
         ))}
       </div>
     </>

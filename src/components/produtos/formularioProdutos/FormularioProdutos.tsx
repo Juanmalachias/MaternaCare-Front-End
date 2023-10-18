@@ -113,7 +113,7 @@ function FormularioProdutos() {
           toastAlerta('O token expirou, favor logar novamente', 'info')
           handleLogout()
         } else {
-          toastAlerta('Erro ao atualizar a Postagem', 'erro');
+          toastAlerta('Erro ao atualizar a Produto', 'erro');
         }
       }
     } else {
@@ -131,7 +131,7 @@ function FormularioProdutos() {
           toastAlerta('O token expirou, favor logar novamente', 'info')
           handleLogout()
         } else {
-          toastAlerta('Erro ao cadastrar a Postagem', 'erro');
+          toastAlerta('Erro ao cadastrar a Produto', 'erro');
         }
       }
     }
@@ -141,17 +141,17 @@ function FormularioProdutos() {
 
   return (
     <div className="container flex flex-col mx-auto items-center">
-      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}</h1>
+      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}</h1>
 
       <form onSubmit={gerarNovoProduto} className="flex flex-col w-1/2 gap-4">
         <div className="flex flex-col gap-2">
-          <label htmlFor="titulo">Titulo da postagem</label>
+          <label htmlFor="titulo">Titulo do produto</label>
           <input
             value={produto.nomeProduto}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
             placeholder="Titulo"
-            name="titulo"
+            name="nomeProduto"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
@@ -163,7 +163,7 @@ function FormularioProdutos() {
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
             placeholder="Texto"
-            name="texto"
+            name="descricao"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
@@ -171,10 +171,10 @@ function FormularioProdutos() {
         <div className="flex flex-col gap-2">
           <p>Categoria do produto</p>
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
-            <option value="" selected disabled>Selecione um tema</option>
+            <option value="" selected disabled>Selecione uma Categoria</option>
             {categorias.map((categoria) => (
               <>
-                <option value={categoria.id} >{categoria.descricao}</option>
+                <option value={categoria.id} >{categoria.descricao} </option>
               </>
             ))}
           </select>
