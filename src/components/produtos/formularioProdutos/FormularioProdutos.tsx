@@ -51,7 +51,7 @@ function FormularioProdutos() {
   }
 
   async function buscarCategoria() {
-    await buscar('/categoria', setCategoria, {
+    await buscar('/categoria', setCategorias, {
       headers: {
         Authorization: token,
       },
@@ -157,13 +157,37 @@ function FormularioProdutos() {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="titulo">Texto do produto</label>
+          <label htmlFor="titulo">Texto do descrição</label>
           <input
             value={produto.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
             placeholder="Texto"
             name="descricao"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="titulo">preço</label>
+          <input
+            value={produto.preco}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="text"
+            placeholder="Texto"
+            name="preco"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="titulo">Foto</label>
+          <input
+            value={produto.foto}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="text"
+            placeholder="Texto"
+            name="foto"
             required
             className="border-2 border-slate-700 rounded p-2"
           />

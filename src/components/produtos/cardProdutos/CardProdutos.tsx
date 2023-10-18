@@ -18,6 +18,8 @@ function CardProdutos({post}: CardProdutosProps) {
           <h4 className='text-lg font-semibold uppercase'>{post.nomeProduto}</h4>
           <p>{post.descricao}</p>
           <p>Categoria: {post.categoria?.descricao}</p>
+          <p>Foto: {post.foto}</p>
+          <p>preço R${post.preco}</p>
         </div>
       </div>
       <div className="flex">
