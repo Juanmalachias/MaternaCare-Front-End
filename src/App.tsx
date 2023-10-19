@@ -18,12 +18,15 @@ import Carousel from './components/carousel/carousel';
 import Card from './components/cards/Card';
 import Doacao from './components/doacao/Doacao';
 import Perfil from './paginas/perfil/Perfil';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
     <>
     <AuthProvider>
+      <ToastContainer/>
         <BrowserRouter>
           <Navbar />
           <div className='min-h-[80vh]'>
@@ -41,6 +44,7 @@ function App() {
                   </Home>
                 }
               />
+              
               <Route path="/categoria" element={<ListaCategoria />} />
               <Route path="/cadastroCategoria" element={<FormularioCategoria/>} />
               <Route path="/editarCategoria/:id" element={<FormularioCategoria/>} />

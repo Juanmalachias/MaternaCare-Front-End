@@ -16,7 +16,7 @@ function Login() {
 
   const {isLoading} = useContext(AuthContext) 
 
-  useEffect(() => {
+  useEffect(() => { 
     if (usuario.token !== "") {
         navigate('/home')
     }
