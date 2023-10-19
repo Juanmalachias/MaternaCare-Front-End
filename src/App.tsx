@@ -19,6 +19,7 @@ import Doacao from './components/doacao/Doacao';
 import Perfil from './paginas/perfil/Perfil';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Sobre from './paginas/sobre/Sobre';
 
 
 
@@ -57,6 +58,7 @@ function App() {
               <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
               <Route path="/deletarProduto/:id" element={<DeletarProdutos />} />
               <Route path="/perfil" element={<Perfil />} />
+              <Route path="/sobre" element={<Sobre />} />
             </Routes>
           </div>
           <Footer />
