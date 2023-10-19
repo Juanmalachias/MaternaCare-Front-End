@@ -1,3 +1,21 @@
 .footer{
-    background: radial-gradient(circle at right, rgb(234, 71, 152), rgb(255, 0, 98));
+    background: #ffe0e7;
+    z-index: 1000;
+}
+
+.footerpadrao {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.copyfim {
+    font-size: 15px;
+}
+
+.hrfooter{
+    border-color: black;
+    height: 5px; 
 }

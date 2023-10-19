@@ -4,6 +4,8 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Categoria from '../../../models/Categoria';
 import { atualizar, buscar, cadastrar } from '../../../service/Service';
 import { toastAlerta } from '../../../utils/toastAlerta';
+import './FormularioCategoria.css';
+import testeimagem from "../../../assets/LogoHome.png";
 
 function FormularioCategoria() {
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
@@ -97,8 +99,8 @@ function FormularioCategoria() {
   }, [token]);
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto ">
-      <h1 className="text-4xl text-center my-8 borde border-solid rounded-lg py-2 px-4 bg-indigo-800 text-white">
+    <div className="container flex flex-col items-center justify-center mx-auto fonteCategoria">
+      <h1 className="text-4xl text-center my-8 py-2 px-4 ">
         {id === undefined ? 'Cadastre uma nova categoria' : 'Editar categoria'}
       </h1>
 
@@ -126,13 +128,39 @@ function FormularioCategoria() {
           />
         </div>
         <button
-          className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
+          className="rounded w-1/2 py-2 botaoCadCat mx-auto block"
           type="submit"
         >
           {id === undefined ? 'Cadastrar' : 'Editar'}
         </button>
       </form>
+
+      
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+    <a href="#">
+        <img class="p-8 rounded-t-lg" src={testeimagem} alt="product image" />
+    </a>
+    <div class="px-5 pb-5">
+        <a href="#">
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Nome do produto</h5>
+        </a>
+        <div class="flex items-center mt-2.5 mb-5">
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Categoria: </h5>
+        </div>
+        <div class="flex items-center mt-2.5 mb-5">
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Descrição: </h5>
+        </div>
+        <div class="flex items-center justify-between">
+            <span class="text-3xl font-bold text-gray-900 dark:text-white">R$616,00</span>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Editar</a>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Deletar</a>
+        </div>
     </div>
+</div>
+
+    </div>
+
+    
   );
 }
 

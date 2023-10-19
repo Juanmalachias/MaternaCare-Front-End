@@ -14,6 +14,9 @@ import FormularioCategoria from './components/categoria/formularioCategoria/Form
 import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
 import FormularioProdutos from './components/produtos/formularioProdutos/FormularioProdutos';
 import DeletarProdutos from './components/produtos/deletarProdutos/DeletarProdutos';
+import Carousel from './components/carousel/carousel';
+import Card from './components/cards/Card';
+import Doacao from './components/doacao/Doacao';
 
 
 function App() {
@@ -27,12 +30,20 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
-              <Route path="/home" element={<Home />} />
+              <Route
+                path="/home"
+                element={
+                  <Home>
+                    <Carousel />
+                    <Card />
+                    <Doacao />
+                  </Home>
+                }
+              />
               <Route path="/categoria" element={<ListaCategoria />} />
               <Route path="/cadastroCategoria" element={<FormularioCategoria/>} />
               <Route path="/editarCategoria/:id" element={<FormularioCategoria/>} />
               <Route path="/deletarCategoria/:id" element={<DeletarCategoria/>} />
-
               <Route path="/produtos" element={< ListaProdutos/>} />
               <Route path="/cadastroProduto" element={<FormularioProdutos />} />
               <Route path="/editarProduto/:id" element={<FormularioProdutos />} />

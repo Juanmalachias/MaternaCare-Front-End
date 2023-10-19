@@ -5,7 +5,7 @@ import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 import { buscar, atualizar, cadastrar } from '../../../service/Service';
 import { toastAlerta } from '../../../utils/toastAlerta';
-
+import './FormularioProduto.css';
 
 
 function FormularioProdutos() {
@@ -140,7 +140,7 @@ function FormularioProdutos() {
   const carregandoCategoria = categoria.descricao === '';
 
   return (
-    <div className="container flex flex-col mx-auto items-center">
+    <div className="container flex flex-col mx-auto items-center  fonteProduto">
       <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}</h1>
 
       <form onSubmit={gerarNovoProduto} className="flex flex-col w-1/2 gap-4">
@@ -203,7 +203,7 @@ function FormularioProdutos() {
             ))}
           </select>
         </div>
-        <button disabled={carregandoCategoria} type='submit' className='rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
+        <button disabled={carregandoCategoria} type='submit' className='rounded w-1/2 mx-auto block py-2 botaoCadProd'>
           {carregandoCategoria ? <span>Carregando</span> : id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>
       </form>
