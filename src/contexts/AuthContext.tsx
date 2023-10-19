@@ -4,6 +4,7 @@ import UsuarioLogin from "../models/UsuarioLogin"
 import { login } from "../service/Service"
 import { toastAlerta } from "../utils/toastAlerta"
 
+
 interface AuthContextProps {
     usuario: UsuarioLogin
     handleLogout(): void
@@ -18,6 +19,8 @@ interface AuthProviderProps {
 export const AuthContext = createContext({} as AuthContextProps)
 
 export function AuthProvider({ children }: AuthProviderProps) {
+
+
 
     const [usuario, setUsuario] = useState<UsuarioLogin>({
         id: 0,
@@ -45,6 +48,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
 
     function handleLogout() {
+
         setUsuario({
             id: 0,
             nome: "",
@@ -53,6 +57,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
             senha: "",
             token: ""
         })
+
+        toastAlerta("Logout feito com sucesso", "sucesso")
+
     }
 
     return (

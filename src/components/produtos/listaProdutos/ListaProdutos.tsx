@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import { buscar } from '../../../service/Service';
 import { toastAlerta } from '../../../utils/toastAlerta';
 import CardProdutos from '../cardProdutos/CardProdutos';
+import './ListaProdutos.css'
 
 function ListaProdutos() {
   const [produtos, setProduto] = useState<Produto[]>([]);
@@ -43,6 +44,25 @@ function ListaProdutos() {
 
   return (
     <>
+
+      {usuario.usuario === 'root@root.com' ? (
+        <>
+          <div className="header flex justify-center items-center">
+            <div className='container text-white'>
+              <div className="flex items-center justify-center py-4 ">
+                <p>Você está Logado como Administrador:</p>
+
+                <div className=''><Link to='/cadastroProduto'><button className='BotCadProd'>Cadastrar Produto</button></Link></div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </>
+      ) : (<></>)
+      }
+
       {produtos.length === 0 && (
         <Dna
           visible={true}

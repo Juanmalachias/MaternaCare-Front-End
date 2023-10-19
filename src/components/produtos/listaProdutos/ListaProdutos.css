@@ -1,0 +1,19 @@
+.BotCadProd{
+    background-color: #daffff;
+    color: rgba(0, 0, 0, 0.600);
+    border: none;
+    padding: 3px 3px; 
+    font-size: 16px; 
+    cursor: pointer;
+    border-radius: 15px;
+    width: 300px;
+    height: 40px;
+    margin-left: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.BotCadProd:hover{
+    background-color: #ffe0e7;
+    transform: scale(1.1);
+}
