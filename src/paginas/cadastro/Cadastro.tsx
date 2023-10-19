@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { useNavigate, useSubmit } from 'react-router-dom'
+import { Link, useNavigate, useSubmit } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../service/Service'
 import './Cadastro.css'
@@ -74,7 +74,7 @@ function Cadastro() {
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
         <div className="fundoCadastro hidden lg:block"></div>
-        <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
+        <form className='flex justify-center items-center flex-col w-2/3 gap-2' onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-slate-900 text-5xl fonteCadastrar'>Cadastrar</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="nome">Nome</label>
@@ -84,7 +84,7 @@ function Cadastro() {
               name="nome"
               placeholder="Nome"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.nome} 
+              value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
@@ -96,7 +96,7 @@ function Cadastro() {
               name="usuario"
               placeholder="Usuario"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.usuario} 
+              value={usuario.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
@@ -108,7 +108,7 @@ function Cadastro() {
               name="foto"
               placeholder="Foto"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.foto} 
+              value={usuario.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
@@ -120,7 +120,7 @@ function Cadastro() {
               name="senha"
               placeholder="Senha"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.senha} 
+              value={usuario.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
@@ -144,6 +144,15 @@ function Cadastro() {
               Cadastrar
             </button>
           </div>
+          <hr className="border-slate-800 w-full" />
+
+          <p className='textoConta'>
+            Você já é cadastrado aqui?{' '}
+            <Link to="/login" className="hover:underline linkCadastro">
+              <button className='cadastroBotao'>Login</button>
+            </Link>
+          </p>
+          <hr/>
         </form>
       </div>
     </>
