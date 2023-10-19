@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Categoria from '../../../models/Categoria';
 import { atualizar, buscar, cadastrar } from '../../../service/Service';
-import { toastAlerta } from '../../../utils/toastAlerta';
+import { toastAlerta } from '../../../utils/toastAlerta'
 import './FormularioCategoria.css';
 import testeimagem from "../../../assets/LogoHome.png";
 
@@ -59,7 +59,7 @@ function FormularioCategoria() {
           toastAlerta('O token expirou, favor logar novamente', 'info')
           handleLogout()
         } else {
-          toastAlerta('Erro ao atualizar o Categoria', 'erro')
+          toastAlerta("Erro ao atualizar o Categoria", 'erro')
         }
 
       }

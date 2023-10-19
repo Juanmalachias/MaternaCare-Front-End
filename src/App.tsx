@@ -41,6 +41,7 @@ function App() {
                   </Home>
                 }
               />
+              
               <Route path="/categoria" element={<ListaCategoria />} />
               <Route path="/cadastroCategoria" element={<FormularioCategoria/>} />
               <Route path="/editarCategoria/:id" element={<FormularioCategoria/>} />
