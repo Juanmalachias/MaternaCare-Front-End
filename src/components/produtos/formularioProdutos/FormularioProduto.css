@@ -1,0 +1,26 @@
+.fonteProduto {
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  .botaoCadProd {
+    background-color: #daffff ;
+    color: rgba(0, 0, 0, 0.600);
+    border: none;
+    padding: 3px 3px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+
+  .botaoCadProd:hover {
+    background-color: #ffe0e7 ;
+    transform: scale(1.1);
+  }
+
+  .botaoCadProd:disabled {
+    background-color: #ffe0e7 ;
+  }
