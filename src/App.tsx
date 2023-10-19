@@ -17,6 +17,7 @@ import DeletarProdutos from './components/produtos/deletarProdutos/DeletarProdut
 import Carousel from './components/carousel/carousel';
 import Card from './components/cards/Card';
 import Doacao from './components/doacao/Doacao';
+import Perfil from './paginas/perfil/Perfil';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
               <Route path="/cadastroProduto" element={<FormularioProdutos />} />
               <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
               <Route path="/deletarProduto/:id" element={<DeletarProdutos />} />
+              <Route path="/perfil" element={<Perfil/>}/>
             </Routes>
           </div>
           <Footer />

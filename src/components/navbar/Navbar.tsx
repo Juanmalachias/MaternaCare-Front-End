@@ -22,7 +22,8 @@ function Navbar() {
                         <div className='hover:underline'><Link to='/categoria'><button className='navbotao'>Categoria</button></Link></div>
                         <div className='hover:underline'><Link to='/cadastroCategoria'><button className='navbotao'>Cadastrar Categoria</button></Link></div>
                         <div className='hover:underline'><Link to='/cadastroProduto'><button className='navbotao'>Cadastrar Produto</button></Link></div>
-                        <div className='hover:underline'><button className='navbotao'>Perfil</button></div>
+                        <div className='hover:underline'><Link to='/perfil'><button className='navbotao'>Perfil</button></Link></div>
+
                         <div className='hover:underline'><button className='navbotao'>Sair</button></div>
                     </div>
                 </div>
