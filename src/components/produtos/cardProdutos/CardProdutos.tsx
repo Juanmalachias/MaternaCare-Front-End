@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useContext} from 'react';
 import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto'
 import './cardProdutos.css';
+import { AuthContext } from '../../../contexts/AuthContext'
+import { ShoppingCart } from '@phosphor-icons/react'
+
 
 interface CardProdutosProps {
   post: Produto
 }
 
 function CardProdutos({post}: CardProdutosProps) {
+  
+  const { usuario, handleLogout } = useContext(AuthContext);
+  const token = usuario.usuario;
+
   return (
     <div className=' border rounded-3xl	 flex flex-col  overflow-hidden justify-between'>
       <div>
@@ -22,14 +29,25 @@ function CardProdutos({post}: CardProdutosProps) {
           <p>Descrição: {post.descricao}</p>
         </div>
       </div>
-      <div className="flex">
-      <Link to={`/editarProduto/${post.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
-          <button>Editar</button>
-        </Link>
-        <Link to={`/deletarProduto/${post.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
-          <button>Deletar</button>
-        </Link>
-      </div>
+      
+      {token === 'root@root.com' ? (
+        <>
+          <div className="flex">
+        <Link to={`/editarProduto/${post.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+            <button>Editar</button>
+          </Link>
+          <Link to={`/deletarProduto/${post.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+            <button>Deletar</button>
+          </Link>
+        </div>
+        </>
+      ):(<>
+        <Link to={`/editarProduto/${post.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+            <button><ShoppingCart/> Adicionar ao Carinho</button>
+            
+          </Link>
+      </>)}
+
     </div>
   )
 }

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import './Navbar.css';
 import logoNavbar from '../../assets/LogoNavBar.png'
 import { AuthContext } from '../../contexts/AuthContext';
+import { ShoppingCart } from '@phosphor-icons/react'
+
 
 function Navbar() {
 
@@ -29,6 +31,7 @@ function Navbar() {
                             <>
                                 <div className='hover:underline'><Link to='/perfil'><button className='navbotao'>Perfil</button></Link></div>
                                 <div className='hover:underline'><Link to='/home'><button className='navbotao' onClick={handleLogout}>Sair</button></Link></div>
+                                
                             </>
                         )
                         }
