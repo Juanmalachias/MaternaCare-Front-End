@@ -12,7 +12,7 @@ function Footer() {
           <p>
             <div className='container flex '>
               <div className='hover:underline footerpadrao'><a href="https://chat.whatsapp.com/KNswtIFkQSYHfAluns7giG" target="_blank">Grupo WhatsApp das Mães</a></div>
-              <div className='hover:underline footerpadrao'><a href="#" target="_blank">Telemedicina</a></div>
+              <Link to='/telemedicina' className="hover:underline">Telemedicina</Link>
               <div className='hover:underline footerpadrao'><a href="#" target="_blank">Produtos</a></div>
               <Link to='/sobre' className="hover:underline">Nosso Time</Link>
               <div className='hover:underline footerpadrao'><a href="mailto:maternacaregeneration@gmail.com" target="_blank">Entre em contato</a></div>

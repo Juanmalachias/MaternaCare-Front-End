@@ -3,15 +3,15 @@ import './Card.css'
 import IMAGEMCARD1 from '../../assets/Card1.png'
 import IMAGEMCARD2 from '../../assets/Card2.png'
 import IMAGEMCARD3 from '../../assets/Card3.png'
+import { Link } from 'react-router-dom'
+
 
 const Card = () => {
     return (
         <div className='flex justify-center marginAntes'>
             <div className="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cardInteiro">
                 <div className='cardImagemFinal'>
-                    <a href="#">
-                        <img className="rounded-t-lg" src={IMAGEMCARD1} alt="" />
-                    </a>
+                    <Link to='/dicas'><img className="rounded-t-lg" src={IMAGEMCARD1} /></Link>
                 </div>
                 <div className="cardTexto">
                     <a href="#">
@@ -21,9 +21,7 @@ const Card = () => {
             </div>
             <div className="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cardInteiro">
                 <div className='cardImagemFinal'>
-                    <a href="#">
-                        <img className="rounded-t-lg" src={IMAGEMCARD2} alt="" />
-                    </a>
+                    <Link to='/dicas'><img className="rounded-t-lg" src={IMAGEMCARD2} /></Link>
                 </div>
                 <div className="cardTexto">
                     <a href="#">
@@ -33,9 +31,7 @@ const Card = () => {
             </div>
             <div className="max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cardInteiro">
                 <div className='cardImagemFinal'>
-                    <a href="#">
-                        <img className="rounded-t-lg" src={IMAGEMCARD3} alt="" />
-                    </a>
+                    <Link to='/dicas'><img className="rounded-t-lg" src={IMAGEMCARD3} /></Link>
                 </div>
                 <div className="cardTexto">
                     <a href="#">

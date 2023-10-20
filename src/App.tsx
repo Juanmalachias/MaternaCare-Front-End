@@ -20,6 +20,8 @@ import Perfil from './paginas/perfil/Perfil';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Sobre from './paginas/sobre/Sobre';
+import Telemedicina from './paginas/telemedicina/telemedicina';
+import Dicas from './paginas/dicas/dicas';
 
 
 
@@ -59,6 +61,8 @@ function App() {
               <Route path="/deletarProduto/:id" element={<DeletarProdutos />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route path="/sobre" element={<Sobre />} />
+              <Route path="/telemedicina" element={<Telemedicina/>}/>
+              <Route path="/dicas" element={<Dicas/>}/>
             </Routes>
           </div>
           <Footer />

@@ -1,0 +1,28 @@
+.telemedicina {
+    background: #ffe0e7;
+    height: 50px;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.600);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+}
+
+.parceiros {
+    width: 50%;
+    background-color: #daffff;
+
+}
+
+.imgfoto{
+    height: 100%;
+    width: 100;
+}
+
+a {
+    margin-bottom:8px;
+    color: rgba(0, 0, 0, 0.600);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+}
