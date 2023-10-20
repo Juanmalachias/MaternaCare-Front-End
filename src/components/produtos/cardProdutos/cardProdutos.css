@@ -1,0 +1,6 @@
+.cardProdutos{
+    background: white;
+}
+.cardProdutos:hover{
+    background: #ffe0e7;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto'
+import './cardProdutos.css';
 
 interface CardProdutosProps {
   post: Produto
@@ -8,18 +9,17 @@ interface CardProdutosProps {
 
 function CardProdutos({post}: CardProdutosProps) {
   return (
-    <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
+    <div className=' border rounded-3xl	 flex flex-col  overflow-hidden justify-between'>
       <div>
-        <div className="flex w-full bg-indigo-800 text-white py-2 px-4 items-center gap-4">
-          <img src={post.usuario?.foto} className='h-12 rounded-full' alt="" />
-          <h3 className='text-lg font-bold text-center uppercase '>{post.usuario?.nome}</h3>
-        </div>
-        <div className='p-4 bg-slate-200 h-full'>
-          <h4 className='text-lg font-semibold uppercase'>{post.nomeProduto}</h4>
-          <p>{post.descricao}</p>
+        
+        <div className='p-4 px-4 cardProdutos'>
+        <div className='flex justify-center'>
+            <img className="rounded-2xl w-1/2 " src={post.foto}></img>
+          </div>
+          <h4 className='text-lg font-bold uppercase text-center'>{post.nomeProduto}</h4>
+          <p className='text-center text-red-600'>{post.preco.toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}</p>
           <p>Categoria: {post.categoria?.descricao}</p>
-          <p>Foto: {post.foto}</p>
-          <p>preço R${post.preco}</p>
+          <p>Descrição: {post.descricao}</p>
         </div>
       </div>
       <div className="flex">
