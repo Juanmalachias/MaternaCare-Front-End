@@ -14,7 +14,7 @@ const Card = () => {
                     <Link to='/dicas'><img className="rounded-t-lg" src={IMAGEMCARD1} /></Link>
                 </div>
                 <div className="cardTexto">
-                    <a href="#">
+                    <a href="/dicas">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Informações que salvam vidas</h5>
                     </a>
                 </div>
@@ -24,7 +24,7 @@ const Card = () => {
                     <Link to='/dicas'><img className="rounded-t-lg" src={IMAGEMCARD2} /></Link>
                 </div>
                 <div className="cardTexto">
-                    <a href="#">
+                    <a href="/dicas">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Amor em forma de alimento</h5>
                     </a>
                 </div>
@@ -34,7 +34,7 @@ const Card = () => {
                     <Link to='/dicas'><img className="rounded-t-lg" src={IMAGEMCARD3} /></Link>
                 </div>
                 <div className="cardTexto">
-                    <a href="#">
+                    <a href="/dicas">
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Saiba quais as vacinas que seu filho deve tomar</h5>
                     </a>
                 </div>
