@@ -1,5 +1,4 @@
-import { GithubLogo } from '@phosphor-icons/react'
-import { LinkedinLogo } from '@phosphor-icons/react'
+import { LinkedinLogo, GithubLogo } from '@phosphor-icons/react'
 import './Sobre.css'
 
 function Sobre() {
