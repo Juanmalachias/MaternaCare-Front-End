@@ -16,12 +16,12 @@ function CardProdutos({post}: CardProdutosProps) {
   const token = usuario.usuario;
 
   return (
-    <div className=' border rounded-3xl	 flex flex-col  overflow-hidden justify-between'>
+    <div className='cardProdutos border rounded-3xl	 flex flex-col  overflow-hidden justify-between'>
       <div>
         
-        <div className='p-4 px-4 cardProdutos'>
+        <div className='p-4 px-4 '>
         <div className='flex justify-center'>
-            <img className="rounded-2xl w-1/2 " src={post.foto}></img>
+            <img className="rounded-2xl w-1/2 mb-2 " src={post.foto}></img>
           </div>
           <h4 className='text-lg font-bold uppercase text-center'>{post.nomeProduto}</h4>
           <p className='text-center text-red-600'>{post.preco.toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}</p>
@@ -43,7 +43,7 @@ function CardProdutos({post}: CardProdutosProps) {
         </>
       ):(<>
         <Link to={`/editarProduto/${post.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
-            <button><ShoppingCart/> Adicionar ao Carinho</button>
+            <button className='flex justify-center items-center'><ShoppingCart/> Adicionar ao Carinho</button>
             
           </Link>
       </>)}

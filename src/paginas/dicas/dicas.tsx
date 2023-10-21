@@ -35,10 +35,10 @@ function dicas() {
                             <p>- Contribui para a prevenção da osteoporose;</p>
                         </div>
                     </div>
-                    <div  className="telemedicina  flex flex-col items-center justify-center py-4 mb-2" >
+                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2" >
                         <p className='text-black'>SAIBA TODAS AS VACINAS QUE SEU BEBÊ DEVE TOMAR NOS PRIMEIROS MESES DE VIDA</p>
                     </div>
-                    <div className='flex items-center px-40 py-8 mb-20'>
+                    <div className='flex items-center px-40 py-8 '>
                         <div className='pr-09'>
                             <img src={imag2} />
                         </div>
@@ -61,6 +61,11 @@ function dicas() {
                             <p>Catapora: 12 meses e 15 meses;</p>
                             <p>Hepatite A: 12 meses e 18 meses.</p>
                         </div>
+
+                    </div>
+                    <div className='flex flex-col items-center justify-center mb-10'>
+                        <p>Se você quer saber sobre todas as campanhas de vacinação <a href="https://www.youtube.com/watch?v=2X8dho2dEko" className='text-blue-600'>Clique aqui</a> e  não deixe de proteger seu filho</p>
+
                     </div>
                     <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2" >
                         <p className='text-black'>MANOBRA DE HEIMLICH - MANOBRA DE DESENGASGO :CONHECIMENTO QUE SALVA VIDAS</p>
@@ -87,21 +92,24 @@ function dicas() {
                     </div>
                     <div className='px-20 mb-10'>
                         <p>Aprenda Técnicas de Ressuscitação: Conhecer as técnicas de ressuscitação cardiopulmonar (RCP) infantil é valioso.
-                            Em qualquer situação de emergência, chame ajuda profissional imediatamente ligue : 192 (Samu) ou para o 193 (Corpo de Bombeiros).</p>
-                        <a href="https://www.youtube.com/watch?v=2X8dho2dEko">Assista o vídeo da manobra clicando aqui</a>
+                            Em qualquer situação de emergência, chame ajuda profissional imediatamente ligue: <a className='font-bold'>192 (Samu) ou para o 193 (Corpo de Bombeiros).</a></p>
+                        <a className='flex flex-col items-center justify-center mb-2 text-blue-600' href="https://www.youtube.com/watch?v=2X8dho2dEko">Assista o vídeo da manobra clicando aqui</a>
+                        <div className='flex flex-col items-center justify-center mb-10 '>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2X8dho2dEko?si=p8q9Y-nHhEmAooFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                     </div>
                     <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-10" >
                         <p className='text-black'>Um tributo à força silenciosa que molda o mundo: as mães</p>
                     </div>
                     <div className='flex flex-col items-center justify-center mb-10'>
-                        <iframe 
-                         width="560" 
-                         height="315" 
-                         src="https://www.youtube.com/embed/7Qdeqrclwjc?si=SdYJFQ0elaQ8oOEy" 
-                         title="YouTube video player" 
-                         frameborder="0" 
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                         allowfullscreen></iframe>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/7Qdeqrclwjc?si=SdYJFQ0elaQ8oOEy"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
 
