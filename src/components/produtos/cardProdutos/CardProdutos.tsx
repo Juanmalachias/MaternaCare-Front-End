@@ -1,10 +1,13 @@
 import React, { useContext} from 'react';
 import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto'
+
+
 import './cardProdutos.css';
 import { AuthContext } from '../../../contexts/AuthContext'
 import { ShoppingCart } from '@phosphor-icons/react'
 import { CartContext } from '../../../contexts/CartContext';
+
 
 
 interface CardProdutosProps {
@@ -15,6 +18,7 @@ function CardProdutos({post}: CardProdutosProps) {
   
   const { usuario, handleLogout } = useContext(AuthContext);
   const { addProductToCart } = useContext(CartContext)
+
   const token = usuario.usuario;
 
   return (
@@ -46,6 +50,7 @@ function CardProdutos({post}: CardProdutosProps) {
       ):(<>
         <div className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
             <button className='flex justify-center items-center' onClick={() => addProductToCart(post)}><ShoppingCart/> Adicionar ao Carinho</button>
+
             
           </div>
       </>)}

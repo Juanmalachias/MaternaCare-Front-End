@@ -5,33 +5,6 @@ function Sobre() {
 
     const people = [
         {
-            name: "Juan Malachias",
-            cargo: "Desenvolvedor",
-            href: "https://github.com/Juanmalachias",
-            linkedin: "https://www.linkedin.com/in/juanmalachias/",
-            imageSrc:
-                "https://github.com/Juanmalachias.png",
-            imageAlt: "Integrante do projeto",
-        }, 
-        {
-            name: "Patricia Soldo",
-            cargo: "Desenvolvedor",
-            href: "https://github.com/PatiSoldo",
-            linkedin: "https://www.linkedin.com/in/patriciasoldo/",
-            imageSrc:
-                "https://github.com/PatiSoldo.png",
-            imageAlt: "Integrante do projeto",
-        }, 
-        {
-            name: "Thiago Reis",
-            cargo: "Desenvolvedor",
-            href: "https://github.com/ThiagoReisFreitas",
-            linkedin: "https://www.linkedin.com/in/thiagoreisfreitas/",
-            imageSrc:
-                "https://github.com/ThiagoReisFreitas.png",
-            imageAlt: "Integrante do projeto",
-        },       
-        {
             name: "Antonio Carlos",
             cargo: "Desenvolvedor",
             href: "https://github.com/TonyKerr07",
@@ -40,6 +13,15 @@ function Sobre() {
                 "https://github.com/TonyKerr07.png",
             imageAlt: "Integrante do projeto",
         },       
+        {
+            name: "Juan Malachias",
+            cargo: "Desenvolvedor",
+            href: "https://github.com/Juanmalachias",
+            linkedin: "https://www.linkedin.com/in/juanmalachias/",
+            imageSrc:
+                "https://github.com/Juanmalachias.png",
+            imageAlt: "Integrante do projeto",
+        }, 
         {
             name: "Lucas Nascimentos",
             cargo: "Desenvolvedor",
@@ -50,6 +32,15 @@ function Sobre() {
             imageAlt: "Integrante do projeto",
         },       
         {
+            name: "Patricia Soldo",
+            cargo: "Desenvolvedor",
+            href: "https://github.com/PatiSoldo",
+            linkedin: "https://www.linkedin.com/in/patriciasoldo/",
+            imageSrc:
+                "https://github.com/PatiSoldo.png",
+            imageAlt: "Integrante do projeto",
+        }, 
+        {
             name: "Steffanie Manini",
             cargo: "Desenvolvedor",
             href: "https://github.com/stefmanini",
@@ -57,13 +48,27 @@ function Sobre() {
             imageSrc:
                 "https://github.com/stefmanini.png",
             imageAlt: "Integrante do projeto",
-        }
-
+        },
+        {
+            name: "Thiago Reis",
+            cargo: "Desenvolvedor",
+            href: "https://github.com/ThiagoReisFreitas",
+            linkedin: "https://www.linkedin.com/in/thiagoreisfreitas/",
+            imageSrc:
+                "https://github.com/ThiagoReisFreitas.png",
+            imageAlt: "Integrante do projeto",
+        }   
     ];
 
     return (
         <>
             <div className="bg-white ">
+                <div className="mx-auto max-w-2xl px-4 pb-[50px]">
+                    <h2 className="text-3xl font-bold  text-black text-center mb-4">ODS</h2>
+                    <p>3.1. Até 2030, reduzir a taxa de mortalidade materna global para menos de 70 mortes por 100.000 nascidos vivos;</p>
+                    <p>3.2. Até 2030, acabar com as mortes evitáveis de recém-nascidos e crianças menores de 5 anos, com todos os países objetivando reduzir a mortalidade neonatal para pelo menos 12 por 1.000 nascidos vivos e a mortalidade de crianças menores de 5 anos para pelo menos 25 por 1.000 nascidos vivos;</p>
+                </div>
+
                 <div className="mx-auto max-w-2xl px-4 pb-[50px] ">
                     <h2 className="text-3xl font-bold  text-black text-center mb-4">
                         Sobre a equipe
@@ -99,7 +104,7 @@ function Sobre() {
                                         </h3>
                                         <p className='text-center mt-[-10px] text-black'> {dev.cargo} </p>
 
-                                        <div className='mt-2 flex gap-x-2 justify-center'>
+                                        <div className='mt-2 flex gap-x-2 justify-center mb-20'>
                                             <a href={dev.href} target="_blank"><GithubLogo className="text-black w-9 h-9 cursor-pointer hover:text-verde_claro1 dark:hover:text-verde_claro2 transition-all duration-300 ease-in-out " /></a>
                                             <a href={dev.linkedin} target="_blank"><LinkedinLogo className="text-black w-9 h-9 cursor-pointer hover:text-verde_claro1 dark:hover:text-verde_claro2 transition-all duration-300 ease-in-out" /></a>
                                         </div>
