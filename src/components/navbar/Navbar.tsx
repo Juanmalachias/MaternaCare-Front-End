@@ -30,6 +30,7 @@ function Navbar() {
                         ) : (
                             <>
                                 <div className='hover:underline'><Link to='/perfil'><button className='navbotao'>Perfil</button></Link></div>
+                                <div className='hover:underline'><Link to='/carrinho'><button className='navbotao'>Carrinho</button></Link></div>
                                 <div className='hover:underline'><Link to='/home'><button className='navbotao' onClick={handleLogout}>Sair</button></Link></div>
                                 
                             </>
