@@ -1,13 +1,13 @@
-import React, { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useState } from 'react';
+import Produto from '../models/Produto';
 
-interface Product {
-  id: number;
-  qtd: number;
+interface ProductProps {
+  produto: Produto;
 }
 
 interface CartContextProps {
-  productsCart: Product[];
-  addProductToCart: (id: number) => void;
+  productCart: Array<Produto>;
+  addProductToCart: (produto: Produto) => void;
   removeProductToCart: (id: number) => void;
   clearCart: () => void;
 }
@@ -18,46 +18,36 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
-export function CartProvider({children}: CartProviderProps) {
-  const [productsCart, setProductsCart] = useState<Product[]>([]);
+export function CartProvider({ children }: CartProviderProps) {
+  const [productCart, setProductCart] = useState<any[]>([]);
 
-  const addProductToCart = (id: number) => {
-    const copyProductsCart = [...productsCart];
-
-    const item = copyProductsCart.find((product) => product.id === id);
-
-    if (!item) {
-      copyProductsCart.push({ id: id, qtd: 1 });
-    } else {
-      item.qtd = item.qtd + 1;
-    }
-
-    setProductsCart(copyProductsCart);
+  const addProductToCart = (produto: Produto) => {
+    setProductCart([...productCart, produto]);
   };
 
   const removeProductToCart = (id: number) => {
-    const copyProductsCart = [...productsCart];
+    const copyProductsCart = [...productCart];
 
     const item = copyProductsCart.find((product) => product.id === id);
 
     if (item && item.qtd > 1) {
       item.qtd = item.qtd - 1;
-      setProductsCart(copyProductsCart);
+      setProductCart(copyProductsCart);
     } else {
       const arrayFiltered = copyProductsCart.filter(
         (product) => product.id !== id
       );
-      setProductsCart(arrayFiltered);
+      setProductCart(arrayFiltered);
     }
   };
 
   const clearCart = () => {
-    setProductsCart([]);
+    setProductCart([]);
   };
 
   return (
     <CartContext.Provider
-      value={{ productsCart, addProductToCart, removeProductToCart, clearCart }}
+      value={{ addProductToCart, removeProductToCart, clearCart, productCart }}
     >
       {children}
     </CartContext.Provider>

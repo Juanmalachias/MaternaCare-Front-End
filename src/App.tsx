@@ -22,6 +22,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Sobre from './paginas/sobre/Sobre';
 import Telemedicina from './paginas/telemedicina/telemedicina';
 import Dicas from './paginas/dicas/dicas';
+import CartContext from './contexts/CartContext';
+import Cart from './components/carrinho/Cart';
+
 
 
 
@@ -33,6 +36,7 @@ function App() {
   return (
     <>
       <AuthProvider>
+        <CartContext>
         <ToastContainer />
         <BrowserRouter>
           <Navbar />
@@ -63,10 +67,12 @@ function App() {
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/telemedicina" element={<Telemedicina/>}/>
               <Route path="/dicas" element={<Dicas/>}/>
+              <Route path='/carrinho' element={<Cart/>}/>
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
+        </CartContext>
       </AuthProvider>
     </>
   );
