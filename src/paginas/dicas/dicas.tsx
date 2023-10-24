@@ -95,7 +95,7 @@ function dicas() {
                             Em qualquer situação de emergência, chame ajuda profissional imediatamente ligue: <a className='font-bold'>192 (Samu) ou para o 193 (Corpo de Bombeiros).</a></p>
                         <a className='flex flex-col items-center justify-center mb-2 text-blue-600' href="https://www.youtube.com/watch?v=2X8dho2dEko">Assista o vídeo da manobra clicando aqui</a>
                         <div className='flex flex-col items-center justify-center mb-10 '>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2X8dho2dEko?si=p8q9Y-nHhEmAooFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2X8dho2dEko?si=p8q9Y-nHhEmAooFU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                         </div>
                     </div>
                     <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-10" >
@@ -107,9 +107,8 @@ function dicas() {
                             height="315"
                             src="https://www.youtube.com/embed/7Qdeqrclwjc?si=SdYJFQ0elaQ8oOEy"
                             title="YouTube video player"
-                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            ></iframe>
                     </div>
                 </div>
 

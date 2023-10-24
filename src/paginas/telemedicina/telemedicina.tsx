@@ -46,7 +46,6 @@ function telemedicina() {
                             width: '976px', // Defina a largura desejada aqui
                             height: '610px', // Defina a altura desejada aqui
                         }}
-                        allowFullScreen=""
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
