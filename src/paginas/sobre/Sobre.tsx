@@ -5,7 +5,7 @@ function Sobre() {
 
     const people = [
         {
-            name: "Antonio Carlos",
+            name: "Antonio Kerr",
             cargo: "Desenvolvedor",
             href: "https://github.com/TonyKerr07",
             linkedin: "https://www.linkedin.com/in/antoniokerr/",
@@ -23,7 +23,7 @@ function Sobre() {
             imageAlt: "Integrante do projeto",
         }, 
         {
-            name: "Lucas Nascimentos",
+            name: "Lucas Nascimento",
             cargo: "Desenvolvedor",
             href: "https://github.com/lucas-nasc",
             linkedin: "https://www.linkedin.com/in/lucasnascimentosilva/",

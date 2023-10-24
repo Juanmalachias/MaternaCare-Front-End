@@ -44,7 +44,7 @@ function ListaProdutos() {
 
   return (
     <>
-
+    
       {usuario.usuario === 'root@root.com' ? (
         <>
           <div className="header flex justify-center items-center">
@@ -60,7 +60,16 @@ function ListaProdutos() {
           </div>
 
         </>
-      ) : (<></>)
+      ) : (<>
+        <div className="header flex justify-center items-center">
+          <div className='container text-white'>
+            <div className="flex items-center justify-center py-4 font-bold text-2xl">
+              <p>Escolha o produto de sua preferência!</p>
+            </div>
+
+          </div>
+        </div>
+        </>)
       }
 
       {produtos.length === 0 && (
@@ -78,6 +87,7 @@ function ListaProdutos() {
           <CardProdutos key={produto.id} post={produto} />
         ))}
       </div>
+      
     </>
   );
 }

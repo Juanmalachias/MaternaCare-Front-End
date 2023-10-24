@@ -56,9 +56,19 @@ function ListaCategoria() {
           </div>
 
         </>
-      ) : (<></>)
+      ) : (<>
+        <div className="header flex justify-center items-center">
+          <div className='container text-white'>
+            <div className="flex items-center justify-center py-4 font-bold text-2xl">
+              <p>Categorias</p>
+              
+            </div>
+
+          </div>
+        </div>
+      </>)
       }
-      
+
 
       {categoria.length === 0 && (
         <Dna

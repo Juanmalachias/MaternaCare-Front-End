@@ -1,5 +1,6 @@
 import { createContext, ReactNode, useState } from 'react';
 import Produto from '../models/Produto';
+import { toastAlerta } from "../utils/toastAlerta"
 
 interface ProductProps {
   produto: Produto;
@@ -9,7 +10,8 @@ interface CartContextProps {
   productCart: Array<Produto>;
   addProductToCart: (produto: Produto) => void;
   removeProductToCart: (id: number) => void;
-  clearCart: () => void;
+  clearCartCompra: () => void;
+  clearCartDoa: () => void;
 }
 
 export const CartContext = createContext({} as CartContextProps);
@@ -41,13 +43,21 @@ export function CartProvider({ children }: CartProviderProps) {
     }
   };
 
-  const clearCart = () => {
+  const clearCartCompra = () => {
     setProductCart([]);
+    toastAlerta("Compra realizada com sucesso!", "sucesso")
+    
+  };
+
+  const clearCartDoa = () => {
+    setProductCart([]);
+    toastAlerta("Doação realizada com sucesso!", "sucesso")
+    
   };
 
   return (
     <CartContext.Provider
-      value={{ addProductToCart, removeProductToCart, clearCart, productCart }}
+      value={{ addProductToCart, removeProductToCart, clearCartCompra, clearCartDoa, productCart }}
     >
       {children}
     </CartContext.Provider>

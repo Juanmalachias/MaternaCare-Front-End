@@ -4,6 +4,7 @@ import { AuthContext } from '../../../contexts/AuthContext'
 import Produto from '../../../models/Produto'
 import { buscar, deletar } from '../../../service/Service'
 import { toastAlerta } from '../../../utils/toastAlerta'
+import { Link } from 'react-router-dom'
 
 function DeletarProdutos() {
   const [Produto, setProduto] = useState<Produto>({} as Produto)
@@ -65,22 +66,25 @@ function DeletarProdutos() {
   }
   return (
     <div className='container w-1/3 mx-auto'>
-      <h1 className='text-4xl text-center my-4'>Deletar produtos</h1>
+      <h1 className='text-4xl text-center my-4 font-bold'>Deletar produto</h1>
 
       <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o produto a seguir?</p>
 
-      <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-        <header className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>Produto</header>
-        <div className="p-4">
-          <p className='text-xl h-full'>{Produto.nomeProduto}</p>
-          <p>{Produto.descricao}</p>
+      <div className='cardProdutos border rounded-3xl	 flex flex-col  overflow-hidden justify-between'>
+        <div>
+
+          <div className='p-4 px-4 '>
+            <div className='flex justify-center'>
+              <img className="rounded-2xl w-1/2 mb-2" src={Produto.foto} ></img>
+            </div>
+            <h4 className='text-lg font-bold uppercase text-center'>{Produto.nomeProduto}</h4>
+          </div>
         </div>
-        <div className="flex">
-          <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
-          <button className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center' onClick={DeletarProdutos}>
-            Sim
-          </button>
-        </div>
+        <div className="flex BotEditCarrinho font-bold">
+        <button className='w-full flex items-center justify-center py-2 botEdit hover:underline' onClick={retornar}>Não</button>
+        <button className='w-full flex items-center justify-center botDelete' onClick={DeletarProdutos}>Sim</button>
+       </div>
+
       </div>
     </div>
   )
