@@ -1,6 +1,32 @@
-.cardProdutos{
+.cardProdutos {
     background: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
-.cardProdutos:hover{
-    background: #ffe0e7;
+
+.BotAddCarrinho {
+    background-color: #daffff;
+    color: rgba(0, 0, 0, 0.600);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.BotAddCarrinho:hover{
+    background-color: #ffe0e7;
+}
+
+.BotEditCarrinho {
+    color: rgba(0, 0, 0, 0.600);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.botEdit {
+    background-color: #daffff;
+    margin-bottom: 0;
+}
+
+.botDelete {
+    background-color: #ffe0e7;
+    margin-bottom: 0;
 }

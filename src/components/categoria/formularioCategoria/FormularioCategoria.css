@@ -3,7 +3,7 @@
   }
 
   .botaoCadCat {
-    background-color: #daffff ;
+    background-color: #daffff !important;
     color: rgba(0, 0, 0, 0.600);
     border: none;
     padding: 3px 3px;
@@ -17,7 +17,7 @@
   }
 
   .botaoCadCat:hover {
-    background-color: #ffe0e7 ;
+    background-color: #ffe0e7 !important;
     transform: scale(1.1);
   }
 

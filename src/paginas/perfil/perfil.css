@@ -1,0 +1,25 @@
+.fonteEntrar{
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  .fundoPerfil {
+    background-color: #daffff;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 30px; 
+    border-bottom-right-radius: 30px;
+  }
+
+  .containerPerfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffe0e7;
+    height: 100px;
+    width: 400px;
+    border-radius: 30px;
+  }
+
+  .containerPerfil p {
+    font-size: 25px;
+  }
