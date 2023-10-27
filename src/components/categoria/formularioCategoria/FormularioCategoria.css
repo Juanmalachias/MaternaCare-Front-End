@@ -1,0 +1,26 @@
+.fonteCategoria {
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  .botaoCadCat {
+    background-color: #daffff !important;
+    color: rgba(0, 0, 0, 0.600);
+    border: none;
+    padding: 3px 3px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+
+  .botaoCadCat:hover {
+    background-color: #ffe0e7 !important;
+    transform: scale(1.1);
+  }
+
+  .botaoCadCat:disabled {
+    background-color: #ffe0e7 ;
+  }

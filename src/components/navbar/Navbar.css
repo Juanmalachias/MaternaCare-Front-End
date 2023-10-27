@@ -1,0 +1,61 @@
+.navbar{
+    background-color:white ;
+    color: black;
+}
+
+.div-logo{
+    height: 50px;
+    width: 80px;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+}
+
+.maternanav{
+    color: rgba(0, 0, 0, 0.600);
+    font-family: 'Inria Serif', serif;
+    position: absolute;
+    left: 90px;
+    top: 25px;
+}
+
+div{
+    color: rgba(0, 0, 0, 0.600);
+}
+
+.navbotao{
+    background-color: #daffff;
+    color: rgba(0, 0, 0, 0.600);
+    border: none;
+    padding: 3px 3px; 
+    font-size: 16px; 
+    cursor: pointer;
+    border-radius: 15px;
+    width: 130px;
+    height: 40px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.navbotao:hover{
+    background-color: #ffe0e7;
+    transform: scale(1.1);
+}
+
+.containerbotoes{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.fixed-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.altura {
+    height: 80px;
+}

@@ -1,0 +1,15 @@
+.titulo{
+    color: blue;
+    text-align: center;
+}
+
+.header{
+    background: #ffe0e7;
+    height: 50px;
+}
+
+p{
+    color: rgba(0, 0, 0, 0.600);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+}

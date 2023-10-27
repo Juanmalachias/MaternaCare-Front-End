@@ -1,0 +1,52 @@
+.fundoCadastro {
+  background-image: url(../../assets/imagem-carousel-2.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.margemAcima {
+  margin-top: 25px;
+}
+
+.fonteCadastrar {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.cadastrarBotao {
+  background-color: #daffff !important;
+  color: rgba(0, 0, 0, 0.600);
+  border: none;
+  padding: 3px 3px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 200px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.cadastrarBotao:hover {
+  background-color: #ffe0e7 !important;
+  transform: scale(1.1);
+}
+
+.cancelarBotao {
+  background-color: #ffe0e7;
+  color: rgba(0, 0, 0, 0.600);
+  border: none;
+  padding: 3px 3px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 200px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.cancelarBotao:hover {
+  background-color: #daffff;
+  transform: scale(1.1);
+}

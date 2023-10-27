@@ -1,0 +1,49 @@
+.fundoimagem {
+    background-image: url('../../assets/doacao.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.textoDoacao {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+}
+
+.paragrafoDoacao {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 35px;
+}
+
+.containerTextos {
+    align-items: center;
+    height: 100vh;
+}
+
+.div-metade {
+    flex: 1;
+}
+
+.padalign{
+    padding-bottom: 100px;
+}
+
+.botaoDoar {
+    padding: 3px 3px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 130px;
+    height: 60px;
+    transition: transform 0.3s ease;
+    margin-left: 110px;
+    margin-top: 50px;
+    color: #ffe0e7;
+    font-size: 35px;
+}
+
+.botaoDoar:hover {
+    background-color: #ffe0e7;
+    transform: scale(1.1);
+    color: red;
+}
