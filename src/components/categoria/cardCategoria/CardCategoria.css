@@ -5,4 +5,17 @@
   .UserCat {
     background-color: white;
     cursor: pointer;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding: auto;
+  }
+
+  .AdminCat {
+    background-color: white;
+    cursor: pointer;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding: auto;
   }

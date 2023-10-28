@@ -35,54 +35,56 @@ function App() {
 
   return (
     <>
-      <AuthProvider>
-        <CartContext>
-        <ToastContainer />
-        <BrowserRouter>
-          <Navbar />
-          <div className='min-h-[80vh] fundoCinza'>
-            <Routes>
-            <Route
-                path="/"
-                element={
-                  <Home>
-                    <Carousel />
-                    <Card />
-                    <Doacao />
-                  </Home>
-                }
-              />
-              <Route path="/login" element={<Login />} />
-              <Route path="/cadastro" element={<Cadastro />} />
-              <Route
-                path="/home"
-                element={
-                  <Home>
-                    <Carousel />
-                    <Card />
-                    <Doacao />
-                  </Home>
-                }
-              />
-              <Route path="/categoria" element={<ListaCategoria />} />
-              <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
-              <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
-              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
-              <Route path="/produtos" element={< ListaProdutos />} />
-              <Route path="/cadastroProduto" element={<FormularioProdutos />} />
-              <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
-              <Route path="/deletarProduto/:id" element={<DeletarProdutos />} />
-              <Route path="/perfil" element={<Perfil />} />
-              <Route path="/sobre" element={<Sobre />} />
-              <Route path="/telemedicina" element={<Telemedicina/>}/>
-              <Route path="/dicas" element={<Dicas/>}/>
-              <Route path='/carrinho' element={<Cart/>}/>
-            </Routes>
-          </div>
-          <Footer />
-        </BrowserRouter>
-        </CartContext>
-      </AuthProvider>
+      <div className='fundoCinza'>
+        <AuthProvider>
+          <CartContext>
+            <ToastContainer />
+            <BrowserRouter>
+              <Navbar />
+              <div className='min-h-[80vh]'>
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <Home>
+                        <Carousel />
+                        <Card />
+                        <Doacao />
+                      </Home>
+                    }
+                  />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/cadastro" element={<Cadastro />} />
+                  <Route
+                    path="/home"
+                    element={
+                      <Home>
+                        <Carousel />
+                        <Card />
+                        <Doacao />
+                      </Home>
+                    }
+                  />
+                  <Route path="/categoria" element={<ListaCategoria />} />
+                  <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+                  <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
+                  <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+                  <Route path="/produtos" element={< ListaProdutos />} />
+                  <Route path="/cadastroProduto" element={<FormularioProdutos />} />
+                  <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
+                  <Route path="/deletarProduto/:id" element={<DeletarProdutos />} />
+                  <Route path="/perfil" element={<Perfil />} />
+                  <Route path="/sobre" element={<Sobre />} />
+                  <Route path="/telemedicina" element={<Telemedicina />} />
+                  <Route path="/dicas" element={<Dicas />} />
+                  <Route path='/carrinho' element={<Cart />} />
+                </Routes>
+              </div>
+              <Footer />
+            </BrowserRouter>
+          </CartContext>
+        </AuthProvider>
+      </div>
     </>
   );
 }

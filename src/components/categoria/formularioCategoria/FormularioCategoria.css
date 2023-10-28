@@ -22,5 +22,5 @@
   }
 
   .botaoCadCat:disabled {
-    background-color: #ffe0e7 ;
+    background-color: #ffe0e7 !important;
   }

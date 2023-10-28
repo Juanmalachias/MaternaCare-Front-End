@@ -12,11 +12,11 @@ function dicas() {
         <>
             <div>
                 <div className=''>
-                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2" >
-                        <p className='text-black'>ENTENDA POR QUE O LEITE MATERNO É MELHOR ESCOLHA DA MÃE PARA O BEBÊ</p>
+                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2 font-bold" >
+                        <p className=''>Entenda por que o leite materno é a melhor escolha da mãe para o bebê</p>
                     </div>
                     <div className='flex items-center px-40 py-8 mb-20'>
-                        <div className='pr-09'>
+                        <div className='imagemLeite'>
                             <img src={imag1} />
                         </div>
                         <div className=' paragrafos pl-8 '>
@@ -27,7 +27,7 @@ function dicas() {
                             <p>- Não há risco de contaminação, pois vai diretamente da mama para a boca do bebê;</p>
                             <p >- Fortalece a musculatura facial, prepara para mastigação e fala, além de criar um vínculo emocional seguro e amoroso entre mãe e filho;</p>
 
-                            <p className='font-bold'>Vantagens do aleitamento materno para a mãe</p>
+                            <p className='font-bold'>Vantagens do aleitamento materno para a mãe:</p>
                             <p>- O leite está sempre pronto e livre de contaminação, não exigindo preparação; </p>
                             <p>- É economicamente mais acessível do que fórmulas infantis;</p>
                             <p>- Reduz o sangramento após o parto e ajuda a mãe a retornar ao peso original mais rapidamente;</p>
@@ -35,15 +35,14 @@ function dicas() {
                             <p>- Contribui para a prevenção da osteoporose;</p>
                         </div>
                     </div>
-                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2" >
-                        <p className='text-black'>SAIBA TODAS AS VACINAS QUE SEU BEBÊ DEVE TOMAR NOS PRIMEIROS MESES DE VIDA</p>
+                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2 font-bold" >
+                        <p className=''>Saiba todas as vacinas que seu bebê deve tomar nos primeiros meses de vida</p>
                     </div>
                     <div className='flex items-center px-40 py-8 '>
-                        <div className='pr-09'>
+                        <div className='imagemVacina'>
                             <img src={imag2} />
                         </div>
                         <div className=' paragrafos pl-8 '>
-                            <p className='font-bold'>Vacinando de 0 a 6 meses:</p>
                             <p>BCG: ao nascer; somente após o teste do pezinho</p>
                             <p>Hepatite B: ao nascer, 2 meses e 6 meses;</p>
                             <p>Rotavírus: 2 meses, 4 meses e 6 meses;</p>
@@ -53,7 +52,6 @@ function dicas() {
                             <p>Pneumocócica conjugada: 2 meses, 4 meses e 6 meses;</p>
                             <p>Meningite ACWY e B: 3 meses e 5 meses;</p>
                             <p>Influenza: 6 meses (1ª dose).</p>
-                            <p className='font-bold'>Vacinando de 7 a 18 meses:</p>
                             <p>Febre Amarela: 9 meses;</p>
                             <p>Poliomielite: entre 15 e 18 meses;</p>
                             <p>Meningite ACWY e B: entre 12 meses e 15 meses;</p>
@@ -64,18 +62,20 @@ function dicas() {
 
                     </div>
                     <div className='flex flex-col items-center justify-center mb-10'>
-                        <p>Se você quer saber sobre todas as campanhas de vacinação <a href="https://www.youtube.com/watch?v=2X8dho2dEko" className='text-blue-600'>Clique aqui</a> e  não deixe de proteger seu filho</p>
+                        <p>Se você quer saber sobre todas as campanhas de vacinação <a href="https://www.gov.br/saude/pt-br/campanhas-da-saude/2023/multivacinacao/?utm_source=google&utm_medium=cpc&utm_campaign=multivacinacao-SP&gclid=CjwKCAjwv-2pBhB-EiwAtsQZFNSmIFuaceg2GKcTuZSQPW5vsgsyQAkfQms1YLpA_uGT3Lhw2SZxDBoCz4IQAvD_BwE" className='underline' target='blank_'>clique aqui</a> e  não deixe de proteger seu filho.</p>
 
                     </div>
-                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2" >
-                        <p className='text-black'>MANOBRA DE HEIMLICH - MANOBRA DE DESENGASGO :CONHECIMENTO QUE SALVA VIDAS</p>
+                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2 font-bold" >
+                        <p className=''>Manobra de HEIMLICH - Manobra de desengasgo: Conhecimento que salva vidas</p>
                     </div>
-                    <div className='flex items-center px-40 py-8 '>
-                        <div className='pr-09'>
+                    <p className='flex items-center px-40 py-4'>Para mães de recém-nascidos, entender as manobras de desengasgo é uma habilidade crucial. Embora esperemos o melhor, estar preparado para agir em situações de emergência é essencial.</p>
+
+                    <div className='flex items-center px-40  '>
+                        <div className='imagemManobra'>
                             <img src={imag3} />
                         </div>
+
                         <div className=' paragrafos pl-8 '>
-                            <p>Para mães de recém-nascidos, entender as manobras de desengasgo é uma habilidade crucial. Embora esperemos o melhor, estar preparado para agir em situações de emergência é essencial.</p>
 
                             <p className='font-bold'>Manejo Inicial:</p>
                             <p>Posicionamento Seguro: Mantenha o bebê de bruços em seu antebraço, com a cabeça mais baixa que o corpo, apoiando-a em sua mão.</p>
@@ -84,22 +84,27 @@ function dicas() {
 
                             <p>Compressões Torácicas: Vire o bebê de costas em seu antebraço, com a cabeça mais alta que o corpo, e realize compressões torácicas com dois dedos, abaixo da linha dos mamilos.</p>
 
-                            <p className='font-bold'>Dicas Importantes:</p>
-                            <p>Evite Objetos Pequenos: Mantenha pequenos objetos, como brinquedos e alimentos, fora do alcance do bebê para prevenir engasgos.</p>
-
                         </div>
 
                     </div>
-                    <div className='px-20 mb-10'>
+                    <div className='flex flex-col  px-40 '>
+                        <p className='font-bold'>Dicas Importantes:</p>
+                        <p>Evite Objetos Pequenos: Mantenha pequenos objetos, como brinquedos e alimentos, fora do alcance do bebê para prevenir engasgos.</p>
+                    </div>
+
+                    <div className='px-40 mb-10'>
                         <p>Aprenda Técnicas de Ressuscitação: Conhecer as técnicas de ressuscitação cardiopulmonar (RCP) infantil é valioso.
-                            Em qualquer situação de emergência, chame ajuda profissional imediatamente ligue: <a className='font-bold'>192 (Samu) ou para o 193 (Corpo de Bombeiros).</a></p>
-                        <a className='flex flex-col items-center justify-center mb-2 text-blue-600' href="https://www.youtube.com/watch?v=2X8dho2dEko">Assista o vídeo da manobra clicando aqui</a>
+                            Em qualquer situação de emergência, chame ajuda profissional imediatamente ligue:
+                        </p>
+                        <p className='text-center font-bold py-4'>
+                            192 (Samu) ou para o 193 (Corpo de Bombeiros).
+                        </p>
                         <div className='flex flex-col items-center justify-center mb-10 '>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/2X8dho2dEko?si=p8q9Y-nHhEmAooFU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                         </div>
                     </div>
-                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-10" >
-                        <p className='text-black'>Um tributo à força silenciosa que molda o mundo: as mães</p>
+                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2 font-bold" >
+                        <p className=''>Um tributo à força silenciosa que molda o mundo: as mães</p>
                     </div>
                     <div className='flex flex-col items-center justify-center mb-10'>
                         <iframe
@@ -108,7 +113,7 @@ function dicas() {
                             src="https://www.youtube.com/embed/7Qdeqrclwjc?si=SdYJFQ0elaQ8oOEy"
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            ></iframe>
+                        ></iframe>
                     </div>
                 </div>
 

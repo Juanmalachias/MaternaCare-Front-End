@@ -1,0 +1,29 @@
+.ODSConfig {
+    margin-top: 20px;
+}
+
+.fotoODS {
+    margin-left: 10%;
+    margin-right: 1%;
+}
+
+.TextoODS {
+    margin-right: 10%;
+    margin-left: 1%;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.600);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+}
+
+.FaixaEquipe {
+    background: #ffe0e7;
+    height: 50px;
+    
+}
+
+.divEquipe {
+    width: 100%;
+}

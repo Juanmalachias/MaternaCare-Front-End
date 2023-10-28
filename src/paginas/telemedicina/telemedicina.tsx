@@ -10,31 +10,28 @@ function telemedicina() {
         <>
             <div>
                 <div className=''>
-                    <div className="telemedicina  flex flex-col items-center justify-center py-4 mb-2" >
-                        <p className='text-black'>Telemedicina</p>
+                    <div className="telemedicina  flex flex-col items-center justify-center py-4 font-bold" >
+                        <p className=''>Telemedicina</p>
                     </div>
 
                     <div className='parceiros mx-auto rounded-s-lg flex flex-col items-center justify-center py-2 mb-2'>
                         <p>Nossos parceiros</p>
                     </div>
-                    <div className='flex flex-col items-center justify-center mb-2'>
-                        <p>Entre em contato para marcar uma consulta online</p>
-                    </div>
                 </div>
-                <div className='grid grid-flow-col-dense mb-20 '>
-                    <div className=''>
+                <div className='grid grid-flow-col-dense mb-20 fotosParceiros'>
+                    <div className='cardfoto'>
                         <img src={med1} alt="" />
                     </div>
-                    <div>
+                    <div className='cardfoto'>
                         <img src={med2} alt="" />
                     </div>
-                    <div>
+                    <div className='cardfoto'>
                         <img src={med3} alt="" />
                     </div>
                 </div>
                 <div className='parceiros mx-auto rounded-s-lg flex flex-col items-center justify-center py-2 mb-2'>
-                    <p className='mb-2'>VOCÊ PODE CONSULTAR UBS PRÓXIMAS DA SUA RESIDÊNCIA</p>
-                    <a href="http://buscasaude.prefeitura.sp.gov.br/" target='blank'>Clique aqui</a>
+                    <p className='mb-2'>Consulte as UBS's proximas a sua casa <a href="http://buscasaude.prefeitura.sp.gov.br/" target='blank' className='underline'>clicando aqui</a>.</p>
+                    
                 </div>
                 <div className='mb-10 flex flex-col items-center justify-center'> 
                     <iframe
@@ -43,8 +40,8 @@ function telemedicina() {
                         height="300"
                         style={{
                             border: '0',
-                            width: '976px', // Defina a largura desejada aqui
-                            height: '610px', // Defina a altura desejada aqui
+                            width: '976px', 
+                            height: '610px', 
                         }}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"

@@ -156,6 +156,7 @@ function FormularioProdutos() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
+
         <div className="flex flex-col gap-2">
           <label htmlFor="titulo">Texto do descrição</label>
           <input
@@ -168,6 +169,7 @@ function FormularioProdutos() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
+
         <div className="flex flex-col gap-2">
           <label htmlFor="titulo">preço</label>
           <input
@@ -180,6 +182,7 @@ function FormularioProdutos() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
+
         <div className="flex flex-col gap-2">
           <label htmlFor="titulo">Foto</label>
           <input
@@ -192,6 +195,7 @@ function FormularioProdutos() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
+
         <div className="flex flex-col gap-2">
           <p>Categoria do produto</p>
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
@@ -203,6 +207,7 @@ function FormularioProdutos() {
             ))}
           </select>
         </div>
+        
         <button disabled={carregandoCategoria} type='submit' className='rounded w-1/2 mx-auto block py-2 botaoCadProd'>
           {carregandoCategoria ? <span>Carregando</span> : id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>

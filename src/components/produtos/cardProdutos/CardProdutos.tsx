@@ -30,8 +30,8 @@ function CardProdutos({ post }: CardProdutosProps) {
           </div>
           <h4 className='text-lg font-bold uppercase text-center'>{post.nomeProduto}</h4>
           <p className='text-center text-red-600'>{post.preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
-          <p>Categoria: {post.categoria?.descricao}</p>
-          <p>Descrição: {post.descricao}</p>
+          <p><strong>Categoria:</strong>  {post.categoria?.descricao}</p>
+          <p><strong>Descrição:</strong> {post.descricao}</p>
         </div>
       </div>
 
@@ -47,8 +47,8 @@ function CardProdutos({ post }: CardProdutosProps) {
             </div>
         </>
       ) : (<>
-        <div className='w-full flex items-center justify-center py-2 BotAddCarrinho'>
-          <button className='flex justify-center items-center ' onClick={() => addProductToCart(post)}><ShoppingCart /> Adicionar ao Carinho</button>
+        <div className='w-full flex items-center justify-center py-2 BotAddCarrinho' onClick={() => addProductToCart(post)}>
+          <button className='flex justify-center items-center font-bold' ><ShoppingCart /> Adicionar ao Carrinho</button>
 
 
         </div>

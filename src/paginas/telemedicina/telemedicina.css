@@ -10,19 +10,28 @@ p {
 }
 
 .parceiros {
-    width: 50%;
     background-color: #daffff;
-
 }
 
-.imgfoto{
+.imgfoto {
     height: 100%;
     width: 100;
 }
 
 a {
-    margin-bottom:8px;
+    margin-bottom: 8px;
     color: rgba(0, 0, 0, 0.600);
     font-family: 'Noto Sans', sans-serif;
     font-size: 18px;
+}
+
+.fotosParceiros {}
+
+.cardfoto {
+    padding: 10%;
+    transition: transform 0.3s ease;
+}
+
+.cardfoto:hover {
+    transform: scale(1.05);
 }

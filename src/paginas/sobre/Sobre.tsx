@@ -1,5 +1,6 @@
 import { LinkedinLogo, GithubLogo } from '@phosphor-icons/react'
 import './Sobre.css'
+import FotoODS from '../../assets/ods3.webp'
 
 function Sobre() {
 
@@ -12,7 +13,7 @@ function Sobre() {
             imageSrc:
                 "https://github.com/TonyKerr07.png",
             imageAlt: "Integrante do projeto",
-        },       
+        },
         {
             name: "Juan Malachias",
             cargo: "Desenvolvedor",
@@ -21,7 +22,7 @@ function Sobre() {
             imageSrc:
                 "https://github.com/Juanmalachias.png",
             imageAlt: "Integrante do projeto",
-        }, 
+        },
         {
             name: "Lucas Nascimento",
             cargo: "Desenvolvedor",
@@ -30,7 +31,7 @@ function Sobre() {
             imageSrc:
                 "https://github.com/lucas-nasc.png",
             imageAlt: "Integrante do projeto",
-        },       
+        },
         {
             name: "Patricia Soldo",
             cargo: "Desenvolvedor",
@@ -39,7 +40,7 @@ function Sobre() {
             imageSrc:
                 "https://github.com/PatiSoldo.png",
             imageAlt: "Integrante do projeto",
-        }, 
+        },
         {
             name: "Steffanie Manini",
             cargo: "Desenvolvedor",
@@ -57,27 +58,40 @@ function Sobre() {
             imageSrc:
                 "https://github.com/ThiagoReisFreitas.png",
             imageAlt: "Integrante do projeto",
-        }   
+        }
     ];
 
     return (
         <>
-            <div className="bg-white ">
-                <div className="mx-auto max-w-2xl px-4 pb-[50px]">
-                    <h2 className="text-3xl font-bold  text-black text-center mb-4">ODS</h2>
-                    <p>3.1. Até 2030, reduzir a taxa de mortalidade materna global para menos de 70 mortes por 100.000 nascidos vivos;</p>
-                    <p>3.2. Até 2030, acabar com as mortes evitáveis de recém-nascidos e crianças menores de 5 anos, com todos os países objetivando reduzir a mortalidade neonatal para pelo menos 12 por 1.000 nascidos vivos e a mortalidade de crianças menores de 5 anos para pelo menos 25 por 1.000 nascidos vivos;</p>
+            <div className="">
+                <div className=''>
+                    <div className="telemedicina  flex flex-col items-center justify-center py-4 font-bold" >
+                        <p className=''>ODS</p>
+                    </div>
+
+                    <div className="flex  mx-auto  px-20 pb-[50px] ODSConfig">
+                        <div className='fotoODS'>
+                            <img src={FotoODS} alt="" />
+                        </div>
+                        <div className='TextoODS'>
+                            <p>3.1. Até 2030, reduzir a taxa de mortalidade materna global para menos de 70 mortes por 100.000 nascidos vivos;</p>
+                            <br />
+                            <p>3.2. Até 2030, acabar com as mortes evitáveis de recém-nascidos e crianças menores de 5 anos, com todos os países objetivando reduzir a mortalidade neonatal para pelo menos 12 por 1.000 nascidos vivos e a mortalidade de crianças menores de 5 anos para pelo menos 25 por 1.000 nascidos vivos;</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="mx-auto max-w-2xl px-4 pb-[50px] ">
-                    <h2 className="text-3xl font-bold  text-black text-center mb-4">
-                        Sobre a equipe
-                    </h2>
-                    <h2 className="text-center text-lg text-gray-90">
+                <div className="flex flex-col mx-auto pb-[50px] divEquipe">
+                    <div className="FaixaEquipe  flex flex-col items-center justify-center py-4 font-bold" >
+                        <p className=''>Equipe</p>
+                    </div>
+                    <p className="text-center ODSConfig">
                         Nossa equipe é composta por desenvolvedores engajados, comprometidos
-                        e recém-formados na Generation Brasil! Juntos, transformamos códigos
+                        e recém-formados na Generation Brasil!
+                        <br />
+                        Juntos, transformamos códigos
                         em soluções extraordinárias.
-                    </h2>
+                    </p>
                 </div>
 
                 <div className=" flex justify-center">
@@ -91,7 +105,7 @@ function Sobre() {
                                             alt={dev.imageAlt}
                                             className="cursor-pointer "
                                         />
-                                        
+
                                     </a>
                                 </div>
                                 <div className="flex justify-center ">
