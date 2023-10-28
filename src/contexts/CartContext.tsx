@@ -25,6 +25,8 @@ export function CartProvider({ children }: CartProviderProps) {
 
   const addProductToCart = (produto: Produto) => {
     setProductCart([...productCart, produto]);
+
+    toastAlerta("Produto adicionado ao carrinho!", "sucesso")
   };
 
   const removeProductToCart = (id: number) => {

@@ -106,17 +106,6 @@ function FormularioCategoria() {
 
       <form className="w-1/2 flex flex-col gap-4 " onSubmit={gerarNovoCategoria}>
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao" >Descrição da Categoria</label>
-          <input
-            type="text"
-            placeholder="Descrição"
-            name='descricao'
-            className="border-2 border-slate-700 rounded p-2"
-            value={categoria.descricao}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-          />
-        </div>
-        <div className="flex flex-col gap-2">
           <label htmlFor="categoria" > Categoria</label>
           <input
             type="text"
@@ -127,11 +116,25 @@ function FormularioCategoria() {
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
+
+        <div className="flex flex-col gap-2">
+          <label htmlFor="descricao" >Descrição da Categoria</label>
+          <input
+            type="text"
+            placeholder="Descrição"
+            name='descricao'
+            className="border-2 border-slate-700 rounded p-2"
+            value={categoria.descricao}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+          />
+        </div>
+
         <button
+          disabled={categoria.categoria === ''}
           className="rounded w-1/2 py-2 botaoCadCat mx-auto block"
           type="submit"
         >
-          {id === undefined ? 'Cadastrar' : 'Editar'}
+          {categoria.categoria === '' ? <span>Carregando</span> : id === undefined ? 'Cadastrar' : 'Editar'}
         </button>
       </form>
 
