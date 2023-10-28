@@ -24,9 +24,14 @@ export function CartProvider({ children }: CartProviderProps) {
   const [productCart, setProductCart] = useState<any[]>([]);
 
   const addProductToCart = (produto: Produto) => {
-    setProductCart([...productCart, produto]);
-
-    toastAlerta("Produto adicionado ao carrinho!", "sucesso")
+    const isProductInCart = productCart.some((item) => item.id === produto.id);
+    if(isProductInCart){
+      toastAlerta("Este produto ja esta no carrinho.", "erro")
+    } else {
+      setProductCart([...productCart, produto]);
+      toastAlerta("Produto adicionado ao carrinho!", "sucesso")
+    }
+    console.log(productCart)
   };
 
   const removeProductToCart = (id: number) => {
