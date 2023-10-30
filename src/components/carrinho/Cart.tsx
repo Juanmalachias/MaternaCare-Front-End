@@ -1,15 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CartProvider, CartContext } from '../../contexts/CartContext';
+import { CartContext } from '../../contexts/CartContext';
 import './Cart.css'
 
 function Cart() {
 
-  // const { productsCart, addProductToCart}
-  // const [ product, setProductsCart] = useState(CartContext);
-  const { productCart, clearCartCompra, clearCartDoa } = useContext(CartContext)
-  const [qtd, setQtd] = useState(1)
-
+  
+  const { productCart, clearCartCompra, clearCartDoa, totalCart } = useContext(CartContext)
+  
   return (
     <>
       {productCart.length === 0 ? (
@@ -44,17 +42,13 @@ function Cart() {
                 <img className="fotoProduto" src={produto.foto}></img>
                 <p className='nomeCarrinho'>{produto.nomeProduto}</p>
                 <p className='precoCarrinho'>{produto.preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
-                <div className='flex'>
-                  <button onClick={() => setQtd(prev => prev - 1)}>-</button>
-                  <h3 className='quantidadeCarrinho'>{qtd}</h3>
-                  <button onClick={() => setQtd(prev => prev + 1)}>+</button>
-                </div>
-                <p className='precoCarrinho'>{(qtd * produto.preco).toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
               </div>
             ))}
           </div>
         </div>
-
+        <div>
+          <p>Total: {totalCart()}</p>
+        </div>
         <div className='botaoCarrinho'>
           <button className='botCompra font-bold' onClick={clearCartCompra}>Comprar</button>
           <button className='botCompra font-bold' onClick={clearCartDoa}>Doar</button>
