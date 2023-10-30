@@ -4,12 +4,13 @@ import { toastAlerta } from "../utils/toastAlerta"
 
 interface ProductProps {
   produto: Produto;
+  quant: number;
 }
 
 interface CartContextProps {
   productCart: Array<Produto>;
   addProductToCart: (produto: Produto) => void;
-  removeProductToCart: (id: number) => void;
+  totalCart: () => void;
   clearCartCompra: () => void;
   clearCartDoa: () => void;
 }
@@ -31,23 +32,11 @@ export function CartProvider({ children }: CartProviderProps) {
       setProductCart([...productCart, produto]);
       toastAlerta("Produto adicionado ao carrinho!", "sucesso")
     }
-    console.log(productCart)
   };
 
-  const removeProductToCart = (id: number) => {
-    const copyProductsCart = [...productCart];
-
-    const item = copyProductsCart.find((product) => product.id === id);
-
-    if (item && item.qtd > 1) {
-      item.qtd = item.qtd - 1;
-      setProductCart(copyProductsCart);
-    } else {
-      const arrayFiltered = copyProductsCart.filter(
-        (product) => product.id !== id
-      );
-      setProductCart(arrayFiltered);
-    }
+  const totalCart = () => {
+    const total = productCart.reduce((accumulator, produto) => accumulator + produto.preco, 0);
+    return total
   };
 
   const clearCartCompra = () => {
@@ -64,7 +53,7 @@ export function CartProvider({ children }: CartProviderProps) {
 
   return (
     <CartContext.Provider
-      value={{ addProductToCart, removeProductToCart, clearCartCompra, clearCartDoa, productCart }}
+      value={{ addProductToCart, totalCart, clearCartCompra, clearCartDoa, productCart }}
     >
       {children}
     </CartContext.Provider>
